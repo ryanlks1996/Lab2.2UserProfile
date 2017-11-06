@@ -3,6 +3,7 @@ package my.edu.tarc.lab22userprofile;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -48,4 +49,26 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("Main Activity","onPause");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("Main Activity","onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("Main Activity","onResume");
+    }
+
+
+
 }
