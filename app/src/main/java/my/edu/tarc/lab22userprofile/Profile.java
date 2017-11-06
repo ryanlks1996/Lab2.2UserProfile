@@ -8,8 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Profile extends AppCompatActivity {
-    public static final String ID = "my.edu.tarc.lab22userprofile.ID" ;
-    public static final String EMAIL = "my.edu.tarc.lab22userprofile.EMAIL" ;
+
     private EditText editTextID, editTextEmail;
 
     @Override
@@ -30,8 +29,8 @@ public class Profile extends AppCompatActivity {
 
         //Passing data to an Inte
         // Format: putExtra(Tag,value)
-        intent.putExtra(ID,id);
-        intent.putExtra(EMAIL,email);
+        intent.putExtra(MainActivity.USER_ID,id);
+        intent.putExtra(MainActivity.USER_EMAIL,email);
 
         setResult(MainActivity.REQUEST_PROFILE_UPDATE,intent);
         finish();
